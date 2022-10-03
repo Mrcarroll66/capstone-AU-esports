@@ -1,0 +1,39 @@
+.team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.owimg {
+    width: 150px;
+    height: 110px;
+}
+
+.rlimg {
+    width: 195px;
+    height: 110px;
+}
+
+.sqimg {
+    width: 110px;
+    height: 110px;
+}
+
+.codimg {
+    width: 170px;
+    height: 110px;
+}
+
+table {
+    border-spacing: 30px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    width: 100%;
+    color: white;
+}
