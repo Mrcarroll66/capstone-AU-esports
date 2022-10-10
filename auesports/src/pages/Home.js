@@ -8,10 +8,30 @@ import ft from "../images/fortnite.png";
 import cod from "../images/callofduty.png";
 import ssmb from "../images/smash.png";
 import apex from "../images/apex.png";
+import raven from "../images/raven.png";
 
 function Home() {
     return (
         <>
+            {/*header*/}
+            <header className="webHeader">
+                <div className="headerTitles">
+                    <span className="headerTitleSm">React & Node</span>
+                    <span className="headerTitleLg">Blog</span>
+                </div>
+                <img className="ravenimg" src={raven} alt="Raven" />
+                <header>
+                    <div className="navBar">
+                    <ul className="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/teams">Teams</a></li>
+                </ul>
+                </div>
+                </header>
+            </header>
+
             <div>
                 <div className="team-container">
                     <a href="https://playoverwatch.com/en-us/">
