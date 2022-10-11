@@ -20,18 +20,16 @@ function Home() {
                     <span className="headerTitleLg">Blog</span>
                 </div>
                 <img className="ravenimg" src={raven} alt="Raven" />
-                <header>
-                    <div className="navBar">
-                    <ul className="navLinks">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/teams">Teams</a></li>
-                </ul>
-                </div>
-                </header>
             </header>
-
+            <body>
+                <nav id="topNav">
+                    <ul className="navLinks" >
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/teams">Teams</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
             <div>
                 <div className="team-container">
                     <a href="https://playoverwatch.com/en-us/">
@@ -62,6 +60,7 @@ function Home() {
                     </a>
                 </div>
             </div>
+        </body>
             <footer className="contact">
                 <p>Email@email.com</p>
                 <p>(123) 456-789</p>
