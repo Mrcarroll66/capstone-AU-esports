@@ -1,5 +1,6 @@
 import react from "react";
 import "./home.css";
+import "./news.css";
 import ow from "../images/Overwatch_2.png";
 import lol from "../images/LOL.png";
 import rl from "../images/Rocket-League.png";
@@ -13,6 +14,19 @@ function Home() {
     return (
         <>
             <div>
+            <div className="newscontainer">
+                <a className="headline">News that's big</a>
+                <a className="newsbody">
+                    Filler text that is also the news body, a really long description to show how the text is going to
+                    react to going over
+                </a>
+                <a className="headline">apex news</a>
+                <a className="newsbody">Here is some more filler text</a>
+                <a className="headline">More news</a>
+                <a className="newsbody">Here is some more filler text</a>
+                <a className="headline">More news</a>
+                <a className="newsbody">Here is some more filler text</a>
+            </div>
                 <div className="team-container">
                     <a href="https://playoverwatch.com/en-us/">
                         <img src={ow} alt="Overwatch" className="owimg" />
@@ -42,6 +56,7 @@ function Home() {
                     </a>
                 </div>
             </div>
+           
             <footer className="contact">
                 <p>Email@email.com</p>
                 <p>(123) 456-789</p>
