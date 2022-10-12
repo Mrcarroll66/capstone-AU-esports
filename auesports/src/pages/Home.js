@@ -32,36 +32,6 @@ function Home () {
 						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</nav>
-				<div>
-					<div className="team-container">
-						<a href="https://playoverwatch.com/en-us/">
-							<img src={ow} alt="Overwatch" className="owimg" />
-						</a>
-						<a href="https://www.leagueoflegends.com/en-us/">
-							<img src={lol} alt="League of Legends" className="sqimg" />
-						</a>
-						<a href="https://www.rocketleague.com/">
-							<img src={rl} alt="Rocket League" className="rlimg" />
-						</a>
-						<a href="https://playvalorant.com/en-us/">
-							<img src={val} alt="Valorant" className="sqimg" />
-						</a>
-						<a href="https://www.epicgames.com/fortnite/en-US/home">
-							<img src={ft} alt="Fortnite" className="sqimg" />
-						</a>
-					</div>
-					<div className="team-container">
-						<a href="https://www.callofduty.com/">
-							<img src={cod} alt="Call of Duty" className="codimg" />
-						</a>
-						<a href="https://www.smashbros.com/en_US/">
-							<img src={ssmb} alt="Super Smash Bros" className="sqimg" />
-						</a>
-						<a href="https://www.ea.com/games/apex-legends">
-							<img src={apex} alt="Apex Legends" className="sqimg" />
-						</a>
-					</div>
-				</div>
 			</body>
             <Container fluid>
                 <Row className="team-container">
