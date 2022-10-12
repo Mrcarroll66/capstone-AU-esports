@@ -5,7 +5,7 @@
     margin: 5%;
 }
 .webHeader {
-    background-color: black;
+    background-color: 000002;
     color: white;
     padding: .25%;
     display: flex;
@@ -46,7 +46,7 @@
   #body{
     width: 800px;
     background: white;
-    border: 5px solid black;
+    border: 5px solid #000002;
     box-shadow: 0px 0px 10px 10px;
     margin: auto;}
 
