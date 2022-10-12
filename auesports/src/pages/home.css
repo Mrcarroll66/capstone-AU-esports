@@ -1,9 +1,7 @@
 .team-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 5%;
+    margin: 1%;
 }
+
 .webHeader {
     background-color: 000002;
     color: white;
@@ -49,30 +47,6 @@
     border: 5px solid #000002;
     box-shadow: 0px 0px 10px 10px;
     margin: auto;}
-
-.owimg {
-    width: 150px;
-    height: 110px;
-}
-
-.rlimg {
-    width: 195px;
-    height: 110px;
-}
-
-.sqimg {
-    width: 110px;
-    height: 110px;
-}
-
-.codimg {
-    width: 170px;
-    height: 110px;
-}
-
-table {
-    border-spacing: 30px;
-}
 
 .contact {
     display: flex;
