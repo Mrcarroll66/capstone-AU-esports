@@ -11,10 +11,28 @@ import apex from "../images/apex.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import raven from '../images/raven.png'
 
-function Home() {
+function Home () {
     return (
         <>
+            <header className="webHeader">
+				<div className="headerTitles">
+					<span className="headerTitleSm">React & Node</span>
+					<span className="headerTitleLg">Blog</span>
+				</div>
+				<img className="ravenimg" src={raven} alt="Raven" />
+			</header>
+			<body>
+				<nav id="topNav">
+					<ul className="navLinks" >
+						<li><a href="/">Home</a></li>
+						<li><a href="/teams">Teams</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</nav>
+			</body>
             <Container fluid>
                 <Row className="team-container">
                     <Col>
@@ -54,4 +72,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Home
