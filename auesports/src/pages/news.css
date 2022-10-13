@@ -1,11 +1,10 @@
 .newscontainer { 
-    display: grid;
+    display: flex;
     margin-bottom: 2%;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
     width: 65%;
-    background-color: #F57501;
     border-radius: 5px;
     margin-top: 20px;
 }
@@ -28,5 +27,7 @@
 }
 
 .newsimage {
-    max-width: 80px;
+    width: 25%;
+    justify-content: center;
+    display: inline-block;
 }
