@@ -12,6 +12,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import raven from "../images/raven.png";
+import Carousel from "react-bootstrap/Carousel";
 
 function Home() {
     return (
@@ -41,6 +42,33 @@ function Home() {
                     </ul>
                 </nav>
             </body>
+            <div className="newsContainer">
+                <Carousel>
+                    <Carousel.Item>
+                        <img className="newsimage" src={ow} alt="First slide" />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="newsimage" src={lol} alt="Second slide" />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="newsimage" src={apex} alt="Third slide" />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
             <Container fluid>
                 <Row className="team-container">
                     <Col>
