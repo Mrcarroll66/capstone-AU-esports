@@ -17,15 +17,15 @@ import Carousel from "react-bootstrap/Carousel";
 function Home() {
     return (
         <>
-            <header className="webHeader">
+            {/* <header className="webHeader">
                 <div className="headerTitles">
                     <span className="headerTitleSm">React & Node</span>
                     <span className="headerTitleLg">Blog</span>
                 </div>
-                <img className="ravenimg" src={raven} alt="Raven" />
             </header>
             <body>
                 <nav id="topNav">
+                    <img className="ravenimg" src={raven} alt="Raven" />
                     <ul className="navLinks">
                         <li>
                             <a href="/">Home</a>
@@ -41,7 +41,7 @@ function Home() {
                         </li>
                     </ul>
                 </nav>
-            </body>
+            </body> */}
             <div className="newsContainer">
                 <Carousel>
                     <Carousel.Item>

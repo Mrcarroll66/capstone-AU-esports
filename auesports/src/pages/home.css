@@ -5,7 +5,7 @@
 .webHeader {
     background-color: #000002;
     color: white;
-    padding: .25%;
+    padding: 0.25%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -21,32 +21,36 @@
     width: 100%;
     font-size: 20px;
     text-align: center;
-    background-color: #F57501;}
-  
-  #topNav a{float:left;}
-  
-  #topNav li {
+    background-color: #f57501;
+}
+
+#topNav a {
+    float: left;
+}
+
+#topNav li {
     display: inline-block;
-    }
-  
-  #topNav a {
+}
+
+#topNav a {
     padding: 15px 60px 0px 60px;
     font-weight: bold;
     text-decoration: none;
-    color: White; 
-    }
-  
-  #topNav a:hover {
+    color: White;
+}
+
+#topNav a:hover {
     padding: 0px 60px 0px 60px;
     background-color: lightgray;
-    }
-  
-  #body{
+}
+
+#body {
     width: 800px;
     background: white;
     border: 5px solid #000002;
     box-shadow: 0px 0px 10px 10px;
-    margin: auto;}
+    margin: auto;
+}
 
 .contact {
     display: flex;
@@ -55,4 +59,21 @@
     background-color: black;
     width: 100%;
     color: white;
+}
+
+.newscontainer {
+    display: flex;
+    margin-bottom: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    width: 65%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.newsimage {
+    width: 25%;
+    justify-content: center;
+    display: inline-block;
 }
