@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useState } from "react";
 import "./home.css";
 import ow from "../images/Overwatch_2.png";
 import lol from "../images/LOL.png";
@@ -8,66 +8,65 @@ import ft from "../images/fortnite.png";
 import cod from "../images/callofduty.png";
 import ssmb from "../images/smash.png";
 import apex from "../images/apex.png";
+import coach from "../images/coach.png";
+import valsc from "../images/valscore.png";
+import rlsc from "../images/rlscore.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import raven from "../images/raven.png";
 import Carousel from "react-bootstrap/Carousel";
 
 function Home() {
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex: any, e: any) => {
+        setIndex(selectedIndex);
+    };
+
     return (
-        <>
-            {/* <header className="webHeader">
-                <div className="headerTitles">
-                    <span className="headerTitleSm">React & Node</span>
-                    <span className="headerTitleLg">Blog</span>
+        <div className="homePage">
+            <div className="newsContainer">
+                <div className="newsHeadline">
+                    <Carousel className="headlineImg" activeIndex={index} onSelect={handleSelect}>
+                        <Carousel.Item>
+                            <img className="newsimage" src={coach} alt="First slide" />
+                            <Carousel.Caption></Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img className="newsimage" src={valsc} alt="Second slide" />
+                            <Carousel.Caption></Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img className="newsimage" src={rlsc} alt="Third slide" />
+
+                            <Carousel.Caption></Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
                 </div>
-            </header>
-            <body>
-                <nav id="topNav">
-                    <img className="ravenimg" src={raven} alt="Raven" />
-                    <ul className="navLinks">
+                <div className="newsTitles">
+                    <ul>
                         <li>
-                            <a href="/">Home</a>
+                            {index === 0 ? (
+                                <h1>Esports Spring 2022 GLEC Playoffs Preview</h1>
+                            ) : (
+                                <h4>Esports Spring 200 GLEC Playoffs Preview</h4>
+                            )}
                         </li>
                         <li>
-                            <a href="/teams">Teams</a>
+                            {index === 1 ? (
+                                <h1>Purple Raiders Sweep Valorant</h1>
+                            ) : (
+                                <h4>Purple Raiders Sweep Valorant</h4>
+                            )}
                         </li>
                         <li>
-                            <a href="/about">About</a>
-                        </li>
-                        <li>
-                            <a href="/contact">Contact</a>
+                            {index === 2 ? (
+                                <h1>Rocket League Pummels Manchester</h1>
+                            ) : (
+                                <h4>Rocket League Pummels Manchester</h4>
+                            )}
                         </li>
                     </ul>
-                </nav>
-            </body> */}
-            <div className="newsContainer">
-                <Carousel>
-                    <Carousel.Item>
-                        <img className="newsimage" src={ow} alt="First slide" />
-                        <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="newsimage" src={lol} alt="Second slide" />
-
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="newsimage" src={apex} alt="Third slide" />
-
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                </div>
             </div>
             <Container fluid>
                 <Row className="team-container">
@@ -104,7 +103,7 @@ function Home() {
                 <p>(123) 456-789</p>
                 <p>1100 E 5th St. Anderson, IN 46012</p>
             </footer>
-        </>
+        </div>
     );
 }
 
