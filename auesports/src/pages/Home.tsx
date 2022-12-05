@@ -1,4 +1,5 @@
 import react, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import ow from "../images/Overwatch_2.png";
 import lol from "../images/LOL.png";
@@ -28,76 +29,96 @@ function Home() {
                 <div className="newsHeadline">
                     <Carousel className="headlineImg" activeIndex={index} onSelect={handleSelect}>
                         <Carousel.Item>
-                            <img className="newsimage" src={coach} alt="First slide" />
+                            <Link to="/News">
+                                <img className="newsimage" src={coach} alt="First slide" />
+                            </Link>
                             <Carousel.Caption></Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="newsimage" src={valsc} alt="Second slide" />
+                            <Link to="/News">
+                                <img className="newsimage" src={valsc} alt="Second slide" />
+                            </Link>
                             <Carousel.Caption></Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="newsimage" src={rlsc} alt="Third slide" />
-
+                            <Link to="/News">
+                                <img className="newsimage" src={rlsc} alt="Third slide" />
+                            </Link>
                             <Carousel.Caption></Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
                 </div>
                 <div className="newsTitles">
-                    <ul>
-                        <li>
-                            {index === 0 ? (
-                                <h1>Esports Spring 2022 GLEC Playoffs Preview</h1>
-                            ) : (
-                                <h4>Esports Spring 200 GLEC Playoffs Preview</h4>
-                            )}
-                        </li>
-                        <li>
-                            {index === 1 ? (
-                                <h1>Purple Raiders Sweep Valorant</h1>
-                            ) : (
-                                <h4>Purple Raiders Sweep Valorant</h4>
-                            )}
-                        </li>
-                        <li>
-                            {index === 2 ? (
-                                <h1>Rocket League Pummels Manchester</h1>
-                            ) : (
-                                <h4>Rocket League Pummels Manchester</h4>
-                            )}
-                        </li>
-                    </ul>
+                    {index === 0 ? (
+                        <h1>
+                            <Link className="bigTitle" to="/News">
+                                <p>yeet</p>
+                                Esports Spring 2022 GLEC Playoffs Preview
+                            </Link>
+                        </h1>
+                    ) : (
+                        <Link className="smallTitle" to="/News">
+                            Esports Spring 2022 GLEC Playoffs Preview
+                        </Link>
+                    )}
+
+                    {index === 1 ? (
+                        <h1>
+                            <Link className="bigTitle" to="/News">
+                                Purple Raiders Sweep Valorant
+                            </Link>
+                        </h1>
+                    ) : (
+                        <Link className="smallTitle" to="/News">
+                            Purple Raiders Sweep Valorant
+                        </Link>
+                    )}
+
+                    {index === 2 ? (
+                        <h1>
+                            <Link className="bigTitle" to="/News">
+                                Rocket League Pummels Manchester
+                            </Link>
+                        </h1>
+                    ) : (
+                        <Link className="smallTitle" to="/News">
+                            Rocket League Pummels Manchester
+                        </Link>
+                    )}
                 </div>
             </div>
-            <Container fluid>
-                <Row className="team-container">
-                    <Col>
-                        <img src={ow} alt="Overwatch" />
-                    </Col>
-                    <Col>
-                        <img src={lol} alt="League of Legends" />
-                    </Col>
-                    <Col>
-                        <img src={rl} alt="Rocket League" />
-                    </Col>
-                    <Col>
-                        <img src={val} alt="Valorant" />
-                    </Col>
-                    <Col>
-                        <img src={ft} alt="Fortnite" />
-                    </Col>
-                </Row>
-                <Row className="team-container">
-                    <Col>
-                        <img src={apex} alt="Apex Legends" />
-                    </Col>
-                    <Col>
-                        <img src={cod} alt="Call of Duty" />
-                    </Col>
-                    <Col>
-                        <img src={ssmb} alt="Super Smash Bros" />
-                    </Col>
-                </Row>
-            </Container>
+            <div className="bottom-half">
+                <Container fluid>
+                    <Row className="team-container">
+                        <Col>
+                            <img src={ow} alt="Overwatch" />
+                        </Col>
+                        <Col>
+                            <img src={lol} alt="League of Legends" />
+                        </Col>
+                        <Col>
+                            <img src={rl} alt="Rocket League" />
+                        </Col>
+                        <Col>
+                            <img src={val} alt="Valorant" />
+                        </Col>
+                        <Col>
+                            <img src={ft} alt="Fortnite" />
+                        </Col>
+                    </Row>
+                    <Row className="team-container">
+                        <Col>
+                            <img src={apex} alt="Apex Legends" />
+                        </Col>
+                        <Col>
+                            <img src={cod} alt="Call of Duty" />
+                        </Col>
+                        <Col>
+                            <img src={ssmb} alt="Super Smash Bros" />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
             <footer className="contact">
                 <p>Email@email.com</p>
                 <p>(123) 456-789</p>

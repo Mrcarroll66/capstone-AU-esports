@@ -4,7 +4,8 @@ import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Teams from "./pages/Teams";
+import LeagueTeam from "./pages/LeagueTeam";
+import OverwatchTeam from "./pages/OverwatchTeam";
 import Topnav from "./pages/components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -18,7 +19,8 @@ const App: React.FC = () => {
                     <Route path="/Home" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/teams" element={<Teams />} />
+                    <Route path="/leagueteam" element={<LeagueTeam />} />
+                    <Route path="/overwatchteam" element={<OverwatchTeam />} />
                 </Routes>
             </Router>
         </div>
