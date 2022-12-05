@@ -13,8 +13,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import raven from "../images/raven.png";
 import Carousel from "react-bootstrap/Carousel";
+import db from "../firebase";
+import { useEffect, useState } from "react";
+import { onSnapshot, collection } from "firebase/firestore";
 
 function Home() {
+    
+    useEffect(() => {
+        onSnapshot(collection(db, "news"), (snapshot) => {console.log(snapshot.docs.map(doc => doc.data()))});
+    })
+
     return (
         <>
             <header className="webHeader">
