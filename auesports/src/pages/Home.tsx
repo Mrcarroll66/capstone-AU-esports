@@ -52,7 +52,6 @@ function Home() {
                     {index === 0 ? (
                         <h1>
                             <Link className="bigTitle" to="/News">
-                                <p>yeet</p>
                                 Esports Spring 2022 GLEC Playoffs Preview
                             </Link>
                         </h1>
