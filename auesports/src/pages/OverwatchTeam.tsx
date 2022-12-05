@@ -5,20 +5,9 @@ import ow from "../images/overwatch.png";
 const OverwatchTeam: React.FC = () => {
     return (
         <div>
+            {/* Roster/Schedule/Score/highlights go on team page*/}
             <div>
                 <img src={ow} alt="Overwatch" />
-                <h1>Overwatch</h1>
-                <div>
-                    Scedule/Score
-                    <p>Upcoming Games</p>
-                    <hr></hr>
-                    <p>Recent Games</p>
-                </div>
-                <div>
-                    Highlights
-                    <p>Most recent highlight goes here</p>
-                    <a href="https://www.twitch.tv/andersonuesports">Twitch</a>
-                </div>
             </div>
             <div>
                 <h3>Roster</h3>
