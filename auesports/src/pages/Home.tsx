@@ -1,4 +1,5 @@
-import react from "react";
+import react, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import ow from "../images/Overwatch_2.png";
 import lol from "../images/LOL.png";
@@ -8,103 +9,121 @@ import ft from "../images/fortnite.png";
 import cod from "../images/callofduty.png";
 import ssmb from "../images/smash.png";
 import apex from "../images/apex.png";
+import coach from "../images/coach.png";
+import valsc from "../images/valscore.png";
+import rlsc from "../images/rlscore.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import raven from "../images/raven.png";
 import Carousel from "react-bootstrap/Carousel";
 
 function Home() {
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex: any, e: any) => {
+        setIndex(selectedIndex);
+    };
+
     return (
-        <>
-            <header className="webHeader">
-                <div className="headerTitles">
-                    <span className="headerTitleSm">React & Node</span>
-                    <span className="headerTitleLg">Blog</span>
-                </div>
-                <img className="ravenimg" src={raven} alt="Raven" />
-            </header>
-            <body>
-                <nav id="topNav">
-                    <ul className="navLinks">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/teams">Teams</a>
-                        </li>
-                        <li>
-                            <a href="/about">About</a>
-                        </li>
-                        <li>
-                            <a href="/contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </body>
+        <div className="homePage">
             <div className="newsContainer">
-                <Carousel>
-                    <Carousel.Item>
-                        <img className="newsimage" src={ow} alt="First slide" />
-                        <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="newsimage" src={lol} alt="Second slide" />
+                <div className="newsHeadline">
+                    <Carousel className="headlineImg" activeIndex={index} onSelect={handleSelect}>
+                        <Carousel.Item>
+                            <Link to="/News">
+                                <img className="newsimage" src={coach} alt="First slide" />
+                            </Link>
+                            <Carousel.Caption></Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Link to="/News">
+                                <img className="newsimage" src={valsc} alt="Second slide" />
+                            </Link>
+                            <Carousel.Caption></Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Link to="/News">
+                                <img className="newsimage" src={rlsc} alt="Third slide" />
+                            </Link>
+                            <Carousel.Caption></Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
+                <div className="newsTitles">
+                    {index === 0 ? (
+                        <h1>
+                            <Link className="bigTitle" to="/News">
+                                Esports Spring 2022 GLEC Playoffs Preview
+                            </Link>
+                        </h1>
+                    ) : (
+                        <Link className="smallTitle" to="/News">
+                            Esports Spring 2022 GLEC Playoffs Preview
+                        </Link>
+                    )}
 
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="newsimage" src={apex} alt="Third slide" />
+                    {index === 1 ? (
+                        <h1>
+                            <Link className="bigTitle" to="/News">
+                                Purple Raiders Sweep Valorant
+                            </Link>
+                        </h1>
+                    ) : (
+                        <Link className="smallTitle" to="/News">
+                            Purple Raiders Sweep Valorant
+                        </Link>
+                    )}
 
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                    {index === 2 ? (
+                        <h1>
+                            <Link className="bigTitle" to="/News">
+                                Rocket League Pummels Manchester
+                            </Link>
+                        </h1>
+                    ) : (
+                        <Link className="smallTitle" to="/News">
+                            Rocket League Pummels Manchester
+                        </Link>
+                    )}
+                </div>
             </div>
-            <Container fluid>
-                <Row className="team-container">
-                    <Col>
-                        <img src={ow} alt="Overwatch" />
-                    </Col>
-                    <Col>
-                        <img src={lol} alt="League of Legends" />
-                    </Col>
-                    <Col>
-                        <img src={rl} alt="Rocket League" />
-                    </Col>
-                    <Col>
-                        <img src={val} alt="Valorant" />
-                    </Col>
-                    <Col>
-                        <img src={ft} alt="Fortnite" />
-                    </Col>
-                </Row>
-                <Row className="team-container">
-                    <Col>
-                        <img src={apex} alt="Apex Legends" />
-                    </Col>
-                    <Col>
-                        <img src={cod} alt="Call of Duty" />
-                    </Col>
-                    <Col>
-                        <img src={ssmb} alt="Super Smash Bros" />
-                    </Col>
-                </Row>
-            </Container>
+            <div className="bottom-half">
+                <Container fluid>
+                    <Row className="team-container">
+                        <Col>
+                            <img src={ow} alt="Overwatch" />
+                        </Col>
+                        <Col>
+                            <img src={lol} alt="League of Legends" />
+                        </Col>
+                        <Col>
+                            <img src={rl} alt="Rocket League" />
+                        </Col>
+                        <Col>
+                            <img src={val} alt="Valorant" />
+                        </Col>
+                        <Col>
+                            <img src={ft} alt="Fortnite" />
+                        </Col>
+                    </Row>
+                    <Row className="team-container">
+                        <Col>
+                            <img src={apex} alt="Apex Legends" />
+                        </Col>
+                        <Col>
+                            <img src={cod} alt="Call of Duty" />
+                        </Col>
+                        <Col>
+                            <img src={ssmb} alt="Super Smash Bros" />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
             <footer className="contact">
                 <p>Email@email.com</p>
                 <p>(123) 456-789</p>
                 <p>1100 E 5th St. Anderson, IN 46012</p>
             </footer>
-        </>
+        </div>
     );
 }
 

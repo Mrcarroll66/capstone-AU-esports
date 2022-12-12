@@ -1,0 +1,36 @@
+.navTop {
+    background-color: #000002;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-shadow: 0px 0.1px 5px 5px rgb(0, 0, 0);
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding: 1%;
+}
+
+.link:hover {
+    color: #f57501;
+}
+
+.dropDown {
+    padding: 1%;
+}
+
+.dropDown:hover {
+    color: #f57501;
+}
+
+.dropDown:active {
+    color: #f57501;
+}
+
+.item a {
+    color: #000002;
+}
